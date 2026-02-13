@@ -35,7 +35,7 @@ export default function Header() {
             await axios.post('/logout', {
             }, {
                 headers: {
-                    'X-XSRF-TOKEN': decodeURIComponent(xsrfToken || ''), // 命綱
+                    'X-XSRF-TOKEN': decodeURIComponent(xsrfToken || ''), 
                     'Accept': 'application/json',
                 }
             });

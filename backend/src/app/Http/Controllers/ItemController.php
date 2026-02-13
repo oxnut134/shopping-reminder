@@ -46,7 +46,7 @@ class ItemController extends Controller
     public function updateItemWithBoughtAt(Request $request)
     {
         $item = $request->item;
-        Log::info('データ確認:', $item);
+        //Log::info('データ確認:', $item);
        $targetRecord = Item::where('user_id', Auth::id())
             ->where('id', $item['id'])
             ->first();

@@ -95,16 +95,13 @@ export default function ToBuyPage() {
 
             await axios.post('/api/updateItem', {
                 item: targetItem,
-                // item_name: itemName,
-                // amount: amount,
             }, {
                 headers: {
                     'X-XSRF-TOKEN': decodeURIComponent(xsrfToken || ''),
                 }
             });
             return;
-            //;
-
+     
         } catch (error) {
             console.error("エラー", error);
         } finally {
@@ -168,7 +165,6 @@ export default function ToBuyPage() {
                                             })}
                                         </span>
                                         <span className="flex-1 -ml-8 text-base  text-gray-800  origin-left">{item.item_name}</span>
-                                        {/*<span className="w-12 text-right text-gray-500 text-base bg-gray-100 px-2 py-1 shrink-0">{item.amount}</span>*/}
                                         <div className="w-15 flex justify-end shrink-0">
                                             {isFirstAppearance && (
                                                 <button

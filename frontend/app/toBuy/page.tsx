@@ -19,7 +19,7 @@ export default function ToBuyPage() {
     const [inputMenu, setInputMenu] = useState([]);
 
     const [editingId, setEditingId] = useState<number | null>(null);
-    const [tempName, setTempName] = useState(""); // 編集中の仮の名前
+    const [tempName, setTempName] = useState(""); 
     const [deleteMode, setDeleteMode] = useState(false);
 
     const [showModal, setShowModal] = useState(false);
@@ -181,12 +181,10 @@ export default function ToBuyPage() {
     const handleSaveEdit = async (id: any) => {
         if (executing) return;
         setExecuting(true);
-        // メモリ上の表示を即座に更新
         const nextItems = items.map((i: any) => i.id == id ? { ...i, item_name: tempName } : i);
         setItems(nextItems);
         setEditingId(null);
 
-        // Laravel の DB を更新（既存の updateItem を流用）
         const target = nextItems.find((i: any) => i.id == id);
         if (target) {
             console.log("target:", target);
@@ -229,8 +227,8 @@ export default function ToBuyPage() {
         }
     }
     const confirmDelete = (id: number) => {
-        setDeleteId(id);   // 消したいIDを控えておく
-        setShowModal(true); // モーダルをオープン！
+        setDeleteId(id);  
+        setShowModal(true); 
     };
 
     if (authChecking) {
@@ -266,7 +264,7 @@ export default function ToBuyPage() {
                             onChange={(e) => setItemName(e.target.value)}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter") {
-                                    handleAdd(); // 👈 エンターが押されたら「追加」関数を発動！
+                                    handleAdd(); 
                                 }
                             }}
                             placeholder="商品名（または右から選択）"
@@ -317,22 +315,20 @@ export default function ToBuyPage() {
                                 <li key={index} className="py-3 flex justify-between items-center animate-in fade-in slide-in-from-top-1">
                                     
                                     {editingId === item.id && !deleteMode  ? (
-                                        /* 👈 編集モード：input を表示 */
                                         <input
                                             type="text"
                                             value={tempName}
                                             onChange={(e) => setTempName(e.target.value)}
                                             onKeyDown={(e) => {
                                                 if (e.key === "Enter") {
-                                                    handleSaveEdit(item.id); // 👈 エンターで保存
+                                                    handleSaveEdit(item.id); 
                                                 }
                                             }}
-                                            onBlur={() => setEditingId(null)} // フォーカス外れたらキャンセル
+                                            onBlur={() => setEditingId(null)} 
                                             autoFocus
                                             className="flex-1 border border-orange-500 rounded me-2 px-2 py-1 outline-none"
                                         />
                                     ) : (
-                                        /* 👈 表示モード：クリックで編集開始 */
                                         <span
                                             onClick={() => {
                                                 console.log("item.is_checked:",item.is_checked);
