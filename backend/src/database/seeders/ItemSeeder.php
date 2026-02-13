@@ -12,12 +12,12 @@ class ItemSeeder extends Seeder
     {
         // user_id = 1 のためのテストデータ
         $items = [
-            ['item_name' => 'たまねぎ', 'amount' => '3個', 'is_checked' => false, 'menu' => true],
-            ['item_name' => 'にんじん', 'amount' => '1本', 'is_checked' => false, 'menu' => true],
-            ['item_name' => '豚肉', 'amount' => '200g', 'is_checked' => true, 'menu' => false, 'bought_at' => now()],
-            ['item_name' => 'ジャガイモ', 'amount' => '2個', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(6)],
-            ['item_name' => 'レタス', 'amount' => '1個', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(3)],
-            ['item_name' => 'トマト', 'amount' => '2個', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(1)],
+            ['item_name' => 'たまねぎ', 'is_checked' => false, 'menu' => true],
+            ['item_name' => 'にんじん', 'is_checked' => false, 'menu' => true],
+            ['item_name' => '豚肉', 'is_checked' => true, 'menu' => false, 'bought_at' => now()],
+            ['item_name' => 'ジャガイモ', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(6)],
+            ['item_name' => 'レタス', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(3)],
+            ['item_name' => 'トマト', 'is_checked' => true, 'menu' => true, 'bought_at' => now()->subDays(1)],
         ];
 
         foreach ($items as $item) {
