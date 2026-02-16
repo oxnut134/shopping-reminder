@@ -24,7 +24,7 @@
 ①ユーザー登録、ログインは通常の操作になっています。
 
 ② 品名入力はキー入力とプルダウンメニューが選択できます。
-　　・買い物記録画面のリストが選択メニューが表示されるようになっています。
+　　・買い物記録画面のリストが選択メニューで表示されるようになっています。
 
 ③ 入力した品名はリストに表示され、チェックボタンで消し込み表示されます。
 
@@ -49,7 +49,7 @@
 
 ## ３)アプリケーションＵＲＬ
 
-**GitHubリポジトリURL : github.com:oxnut134/shopping-reminder**
+**GitHubリポジトリURL : [github.com:oxnut134/shopping-reminder](https://github.com/oxnut134/shopping-reminder)**
 
 ```jsx
 **markdown**
@@ -86,7 +86,7 @@ git clone git@github.com:oxnut134/shopping-reminder
 
 ### ユーザー認証
 
-- **Laravel Breez** v2.3.8
+- **Laravel Breeze** v2.3.8
 
 ## ６)テーブル設計
 
